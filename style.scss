@@ -1,0 +1,40 @@
+$font: Roboto, sans-serif;
+
+html {
+    font-family: $font;
+    font-weight: bold;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    border-bottom: 1px solid #DCDCDC;
+    .navbar {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1230px;
+        padding: 15px 30px;
+        margin: 0 auto;
+    }
+}
+
+.menu {
+    display: flex;
+    li {
+        a {
+            padding: 10px;
+            border-radius: 10px;
+            &:hover {
+                color: white;
+                background-color: #2C507A;
+            }
+        }
+    }
+}
+
+.logo_nav {
+    width: 50px;
+    height: 50px;
+}
