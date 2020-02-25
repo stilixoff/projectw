@@ -6,7 +6,8 @@ html {
 header {
   position: fixed;
   width: 100vw;
-  border-bottom: 1px solid #DCDCDC;
+  -webkit-box-shadow: 0 0 2px rgba(30, 30, 30, 0.5);
+          box-shadow: 0 0 2px rgba(30, 30, 30, 0.5);
 }
 
 header .navbar {
@@ -35,6 +36,8 @@ header .navbar {
 .menu li a {
   padding: 10px;
   border-radius: 10px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .menu li a:hover {
@@ -42,8 +45,12 @@ header .navbar {
   background-color: #2C507A;
 }
 
-.logo_nav {
-  width: 50px;
-  height: 50px;
+.logo_nav a {
+  width: 100%;
+  height: 100%;
+}
+
+.logo_nav a img {
+  width: 120px;
 }
 /*# sourceMappingURL=style.css.map */
