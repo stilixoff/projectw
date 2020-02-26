@@ -67,7 +67,6 @@ header .navbar {
 
 .main {
   position: relative;
-  width: 100vw;
   height: auto;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
@@ -82,7 +81,6 @@ header .navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
   height: 800px;
   background-image: url(./img/conf.jpg);
   background-position: center;
@@ -153,10 +151,9 @@ header .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 100px;
 }
 
 .container-two .left-column__title {
@@ -164,6 +161,8 @@ header .navbar {
   font-size: 32px;
   width: 66%;
   height: 130px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .container-two .left-column__title span {
@@ -171,6 +170,8 @@ header .navbar {
 }
 
 .container-two .right-column__title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 34%;
   text-align: right;
   color: #333;
@@ -187,6 +188,8 @@ header .navbar {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .container-two .right-column__title ul li {
@@ -198,6 +201,8 @@ header .navbar {
   margin: 5px;
   padding: 5px 5px 25px 5px;
   background-color: #EFEFEF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .container-two .right-column__title ul li::before {
