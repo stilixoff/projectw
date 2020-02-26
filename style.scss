@@ -1,4 +1,6 @@
 $font: Roboto, sans-serif;
+$width-content: 1170px;
+$padding-content: 0 15px;
 
 html {
     font-family: $font;
@@ -10,14 +12,15 @@ header {
     width: 100vw;
     background-color: #fff;
     box-shadow: 0 0 2px rgba(30,30,30, 0.5);
+    z-index: 100;
     .navbar {
-        box-sizing: border-box;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1230px;
-        padding: 15px 30px;
+        max-width: $width-content;
+        padding: 15px 15px;
         margin: 0 auto;
+        box-sizing: border-box;
     }
 }
 
@@ -43,5 +46,76 @@ header {
         img {
             width: 120px;
         }
+    }
+}
+
+.main {
+    width: $width-content;
+    height: auto;
+    padding: $padding-content;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.container-one {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 800px;
+    background-image: url(./img/conf.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    .img-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(44, 80, 122, 0.61);
+    }
+}
+
+.title_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100vw;
+    margin: 0 auto;
+    background-color: rgba(44, 80, 122, 1);
+    z-index: 101;
+    .title__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: $width-content;
+        padding: $padding-content;
+    }
+}
+
+.title__left {
+    width: 45%;
+    padding-right: 30px;
+    text-align: right;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    border-right: 2px solid white;
+}
+
+.title__right {
+    width: 55%;
+    padding-left: 30px;
+    text-align: left;
+    color: white;
+    font-size: 34px;
+    box-sizing: border-box;
+    p {
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: 300;
     }
 }
