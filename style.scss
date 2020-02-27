@@ -6,7 +6,6 @@ $text-color: #333;
 
 html {
     font-family: $font;
-    font-weight: bold;
 }
 
 header {
@@ -40,6 +39,7 @@ header {
             padding: 10px;
             border-radius: 10px;
             transition: all .3s ease;
+            font-weight: bold;
             &:hover {
                 color: white;
                 background-color: $main-color;
@@ -131,6 +131,7 @@ header {
         width: 66%;
         height: 130px;
         box-sizing: border-box;
+        font-weight: bold;
         span {
             font-weight: 300;
         }
@@ -189,3 +190,17 @@ header {
 #seconds::before {
     content: 'Сек.';
 }
+
+.left-column__content {
+    display: flex;
+    flex-direction: column;
+    width: 64%;
+    box-sizing: border-box;
+    p {
+        padding-top: 1rem;
+        line-height: 1.4rem;
+    }
+}
+
+@import "style/video.scss";
+
