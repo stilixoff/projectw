@@ -26,7 +26,7 @@ header {
 }
 
 .width-content {
-    width: $width-content;
+    max-width: $width-content;
     margin: 0 auto;
     padding: $padding-content;
     box-sizing: border-box;
@@ -91,7 +91,8 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: $width-content;
+        max-width: $width-content;
+        min-width: 600px;
         padding: $padding-content;
     }
 }
@@ -125,54 +126,62 @@ header {
     flex-wrap: wrap;
     box-sizing: border-box;
     margin-top: 100px;
-    .left-column__title {
-        color: $main-color;
-        font-size: 32px;
-        width: 66%;
-        height: 130px;
-        box-sizing: border-box;
-        font-weight: bold;
-        span {
-            font-weight: 300;
-        }
-    }
+    .container-two__title {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
     
-    .right-column__title {
-        box-sizing: border-box;
-        width: 34%;
-        text-align: right;
-        color: $text-color;
-        font-weight: 300;
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
+        .left-column__title {
+            color: $main-color;
+            font-size: 32px;
+            width: 66%;
+            min-width: 600px;
+            height: 130px;
             box-sizing: border-box;
-            li {
-                position: relative;
-                font-size: 35px;
-                font-weight: bold;
-                min-width: 42px;
-                text-align: center;
-                margin: 5px;
-                padding: 5px 5px 25px 5px;
-                background-color: #EFEFEF;
+            font-weight: bold;
+            span {
+                font-weight: 300;
+            }
+        }
+        .right-column__title {
+            box-sizing: border-box;
+            width: 34%;
+            text-align: right;
+            color: $text-color;
+            font-weight: 300;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
                 box-sizing: border-box;
-                &::before {
-                    content: 'Днів';
-                    position: absolute;
-                    font-size: 1rem;
-                    bottom: 4px;
-                    right: 2px;
-                }
-                &::after{
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: $main-color;
-                    bottom: 0;
-                    left: 0;
+                li {
+                    position: relative;
+                    font-size: 35px;
+                    font-weight: bold;
+                    min-width: 42px;
+                    text-align: center;
+                    margin: 5px;
+                    padding: 5px 5px 25px 5px;
+                    background-color: #EFEFEF;
+                    box-sizing: border-box;
+                    &::before {
+                        content: 'Днів';
+                        position: absolute;
+                        font-size: 1rem;
+                        bottom: 4px;
+                        right: 2px;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $main-color;
+                        bottom: 0;
+                        left: 0;
+                    }
                 }
             }
         }
@@ -191,16 +200,36 @@ header {
     content: 'Сек.';
 }
 
-.left-column__content {
+.container-two__content {
     display: flex;
-    flex-direction: column;
-    width: 64%;
-    box-sizing: border-box;
-    p {
-        padding-top: 1rem;
-        line-height: 1.4rem;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    .left-column__content {
+        display: flex;
+        flex-direction: column;
+        width: 64%;
+        min-width: 600px;
+        box-sizing: border-box;
+        @import "style/video.scss";
+        p {
+            padding-top: 1rem;
+            line-height: 1.4rem;
+        }
+    }
+    .right-column__content {
+        display: flex;
+        flex-direction: column;
+        width: 36%;
+        box-sizing: border-box;
     }
 }
 
-@import "style/video.scss";
 
+.right-column__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
