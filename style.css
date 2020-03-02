@@ -11,7 +11,7 @@
   font-weight: bold;
 }
 
-.text__h4, .science-program h4 {
+.text__h4, .science-program h4, .container-five h4 {
   font-size: 1.5rem;
   font-weight: bold;
   color: #2C507A;
@@ -506,14 +506,16 @@ header .navbar {
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 360px;
+  min-height: 360px;
   margin-top: 40px;
   z-index: 2;
-  margin-bottom: 100px;
+  padding: 15px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .container-four .four__title {
-  height: 100%;
+  min-height: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,6 +547,9 @@ header .navbar {
   margin-top: 15px;
   cursor: pointer;
   text-align: center;
+  background: none;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .container-four .four__title .btn a {
@@ -563,5 +568,33 @@ header .navbar {
   left: 0;
   top: 0;
   z-index: -1;
+}
+
+.container-five {
+  position: relative;
+  margin-top: 50px;
+}
+
+.container-five h4 {
+  margin-bottom: 25px;
+}
+
+.container-five ul li {
+  color: #868585;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  list-style: initial;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container-five::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+  left: 0;
+  bottom: -12px;
 }
 /*# sourceMappingURL=style.css.map */

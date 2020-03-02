@@ -349,12 +349,13 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 360px;
+    min-height: 360px;
     margin-top: 40px;
     z-index: 2;
-    margin-bottom: 100px;
+    padding: 15px 0px;
+    box-sizing: border-box;
     .four__title{
-        height: 100%;
+        min-height: 320px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -374,7 +375,9 @@ header {
             margin-top: 15px;
             cursor: pointer;
             text-align: center;
-            a{
+            background: none;
+            transition: .5s;
+            a {
                 color: white;
             }
             &:hover {
@@ -390,5 +393,32 @@ header {
         left: 0;
         top: 0;
         z-index: -1;
+    }
+}
+
+.container-five {
+    position: relative;
+    margin-top: 50px;
+    h4 {
+        @extend .text__h4;
+        margin-bottom: 25px;
+    }
+    ul {
+        li {
+            color: rgb(134, 133, 133);
+            font-size: 1.3rem;
+            line-height: 2rem;
+            list-style: initial;
+            box-sizing: border-box;
+        }
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: lightgray;
+        left: 0;
+        bottom: -12px;
     }
 }
