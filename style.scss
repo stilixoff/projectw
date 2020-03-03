@@ -367,34 +367,37 @@ header {
             color: white;
             line-height: 3rem;
         }
-        .btn {
-            width: 40%;
-            border: 2px solid white;
-            font-size: 1.3rem;
-            padding: 15px;
-            margin-top: 15px;
-            cursor: pointer;
-            text-align: center;
-            background: none;
-            transition: .5s;
-            a {
-                color: white;
-            }
-            &:hover {
-                background-color: slateblue;
-            }
-        }
-    }
-    .opacity-img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgba(44,80,122, 0.9);
-        left: 0;
-        top: 0;
-        z-index: -1;
     }
 }
+
+.btn {
+    width: 40%;
+    border: 2px solid white;
+    font-size: 1.3rem;
+    padding: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    text-align: center;
+    background: none;
+    transition: .5s;
+    a {
+        color: white;
+    }
+    &:hover {
+        background-color: slateblue !important;
+    }
+}
+
+.opacity-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(44,80,122, 0.9);
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
 
 .container-five {
     position: relative;
@@ -420,5 +423,153 @@ header {
         background-color: lightgray;
         left: 0;
         bottom: -12px;
+    }
+}
+
+.container-six {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.six-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    padding: 10px 0px;
+    h3 {
+        @extend .text__h3;
+        font-size: 3rem;
+        text-align: center;
+    }
+    p {
+        color: rgb(134, 133, 133);
+        font-size: 1.3rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+}
+
+.lectors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    .lector {
+        display: flex;
+        width: 33.33%;
+        min-width: 340px;
+    }
+}
+
+.lector-card {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 30%;
+    min-width: 340px;
+}
+
+.img-lector {
+    width: 100%;
+    // height: 600px;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.lector-description {
+    .name-lector {
+        @extend .text__h4;
+        font-size: 1.8rem;
+        padding: 10px 0px;
+    }
+
+    .who-is {
+        @extend .text__p;
+        font-size: 1.1rem;
+    }
+
+    .lecture-topic {
+        @extend .text__p;
+        font-size: 1.1rem;
+        color: $main-color;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+}
+
+.container-seven {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    background: url(./img/conf.jpg) center no-repeat;
+    margin-top: 70px;
+    z-index: 2;
+}
+
+.cultural-program {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cultural-program__title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cultural-title__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    min-width: 612px;
+    box-sizing: border-box;
+    p:first-child {
+        font-weight: bold;
+        font-size: 2.2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1.2rem;
+        color: white;
+        line-height: 1.4rem;
+        span {
+            font-weight: bolder;
+        }
+    }
+    p:nth-child(2) {
+        margin: 10px 0px;
+    }
+    .btn {
+        border-radius: 5px;
+        width: 20%;
+    }
+}
+
+.cultural-program__img {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    .cultural-img__inner {
+        max-width: 370px;
+        max-height: 250px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
