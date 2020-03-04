@@ -1,7 +1,7 @@
 $font: Roboto, sans-serif;
 $width-content: 1170px;
 $padding-content: 0 15px;
-$main-color: #2C507A;
+$main-color: rgb(77, 135, 201);
 $text-color: #333;
 
 .text__p {
@@ -20,6 +20,16 @@ $text-color: #333;
     font-size: 1.5rem;
     font-weight: bold;
     color: $main-color;
+}
+
+.opacity-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(77, 135, 201, 0.9);
+    left: 0;
+    top: 0;
+    z-index: -1;
 }
 
 html {
@@ -388,17 +398,6 @@ header {
     }
 }
 
-.opacity-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(44,80,122, 0.9);
-    left: 0;
-    top: 0;
-    z-index: -1;
-}
-
-
 .container-five {
     position: relative;
     margin-top: 50px;
@@ -571,5 +570,292 @@ header {
             height: 100%;
             object-fit: cover;
         }
+    }
+}
+
+.container-eight {
+    margin-top: 100px;
+}
+
+.container-eight__title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    p {
+        font-size: 50px;
+        color: $main-color;
+    }
+}
+
+.container-eight__prices {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.wrapper-price {
+    width: 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 360px;
+}
+
+.price__inner {
+    position: relative;
+    border: 2px solid #CCCCCC;
+    padding: 15px;
+    min-height: 550px;
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 50px;
+        width: 80%;
+        li {
+            position: relative;
+            padding: 8px 0px;
+            margin-left: 30px;
+            font-weight: bolder;
+            &::before {
+                position: absolute;
+                content: "\2714";
+                color: green;
+                left: -17px;
+            }
+        }
+    }
+}
+
+.price__title {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    color: $text-color;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.price__price {
+    font-size: 4.7rem;
+    font-weight: bolder;
+    color: $text-color;
+    text-align: center;
+    margin-top: 50px;
+    span {
+        font-size: 3rem;
+    }
+}
+
+.btn__price {
+    position: absolute;
+    bottom: 40px;
+    left: 30%;
+    a {
+        border: 2px solid #ccc;
+        color: #ccc;
+        font-weight: bold;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+}
+
+.active-price {
+    .price__inner {
+        position: relative;
+        border-color: $main-color;
+        overflow: hidden;
+        .price__title {
+            color: $main-color;
+        }
+        .price__price {
+            color: $main-color;
+        }
+        .btn__price {
+            a {
+                border-color: $main-color;
+                color: $main-color;
+            }
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 50px;
+            background-color: $main-color;
+            transform:rotate(-50deg);
+            left: -28px;
+            top: -25px;
+        }
+    }
+}
+
+.container-ten {
+    position: relative;
+    min-height: 500px;
+    background: url(./img/people.jpg) center no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+    z-index: -2;
+    .content__inner {
+        position: relative;
+        padding: 50px 15px;
+        z-index: 100;
+        h3 {
+            width: 80%;
+            font-size: 2.1rem;
+            color: white;
+            line-height: 3rem;
+            padding: 10px 0px;
+        }
+        p {
+            @extend .text__p;
+            color: white;
+        }
+        ul{
+            li{
+                @extend .text__p;
+                color: white;
+            }
+        }
+    }
+}
+
+.container-twelve {
+    margin-top: 50px;
+}
+
+.container-twelve__title {
+    @extend .text__h3;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.container-twelve__info{
+    .twelve-info_inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+.twelve-info__left, .twelve-info__right {
+    width: 50%;
+    min-width: 570px;
+    padding: 25px 15px 0px 15px;
+    box-sizing: border-box;
+    h4 {
+        @extend .text__h4;
+        font-size: 1.2rem;
+    }
+    p {
+        @extend .text__p;
+        margin-top: 15px;
+        span {
+            font-weight: bold;
+        }
+    }
+    ul {
+        li {
+            position: relative;
+            @extend .text__p;
+            font-weight: bold;
+            margin-left: 25px;
+            box-sizing: border-box;
+            padding: 10px 0px;
+            &::before {
+                position: absolute;
+                content: '\2022';
+                left: -15px;
+            }
+        }
+    }
+}
+
+.btn_container_twelve {
+    margin-top: 50px;
+    text-align: center;
+    a {
+        padding: 15px 40px;
+        box-sizing: border-box;
+        border: 2px solid $main-color;
+        background: $main-color;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: .3s;
+        &:hover {
+            background: slateblue;
+            border-color: slateblue;
+        }
+    }
+}
+
+.container-thirteen {
+    margin-top: 100px;
+}
+
+.meeting__titel {
+    text-align: center;
+    h3 {
+        @extend .text__h3;
+        font-size: 2.5rem;
+    }
+    p {
+        margin-top: 30px;
+        color: #757575;
+        font-size: 22px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+}
+
+.meeting__info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    .meeting-map {
+        width: 60%;
+        min-width: 550px;
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
+    .meeting__text {
+        width: 40%;
+        padding: 0px 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+}
+
+.meeting-map {
+    p {
+        @extend .text__p;
+    }
+    .map {
+        margin-top: 20px;
+    }
+}
+
+.meeting__text {
+    h4 {
+        position: relative;
+        @extend .text__h4;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100vh;
+            height: 1px;
+            background: #ccc;
+            left: 0;
+            bottom: -10px;
+        }
+    }
+    p {
+        @extend .text__p;
+        padding: 20px 0px;
     }
 }
