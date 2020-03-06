@@ -1,17 +1,17 @@
 @charset "UTF-8";
-.text__p, .container-two__content .left-column__content p, .cause ol li, .science-program, .lector-description .who-is, .lector-description .lecture-topic, .container-ten .content__inner p, .container-ten .content__inner ul li, .twelve-info__left p, .twelve-info__right p, .twelve-info__left ul li, .twelve-info__right ul li, .meeting-map p, .meeting__text p {
+.text__p, .container-two__content .left-column__content p, .cause ol li, .science-program, .lector-description .who-is, .lector-description .lecture-topic, .container-ten .content__inner p, .container-ten .content__inner ul li, .twelve-info__left p, .twelve-info__right p, .twelve-info__left ul li, .twelve-info__right ul li, .meeting-map p, .meeting__text p, .info-for-contact .info-for-contact__titel p, .info-for-contact .info-for-contact__phone p, .for-pay p {
   color: #333;
   line-height: 1.4rem;
   font-weight: 300;
 }
 
-.text__h3, .container-two .container-two__title .left-column__title, .cause h4, .science-program h3, .six-title h3, .container-twelve__title, .meeting__titel h3 {
+.text__h3, .container-two .container-two__title .left-column__title, .cause h4, .science-program h3, .six-title h3, .container-twelve__title, .meeting__titel h3, .partners h4 {
   color: #4d87c9;
   font-size: 1.6rem;
   font-weight: bold;
 }
 
-.text__h4, .science-program h4, .container-five h4, .lector-description .name-lector, .twelve-info__left h4, .twelve-info__right h4, .meeting__text h4 {
+.text__h4, .science-program h4, .container-five h4, .lector-description .name-lector, .twelve-info__left h4, .twelve-info__right h4, .meeting__text h4, .info-for-contact .info-for-contact__titel h4 {
   font-size: 1.5rem;
   font-weight: bold;
   color: #4d87c9;
@@ -1130,5 +1130,161 @@ header .navbar {
 
 .meeting__text p {
   padding: 20px 0px;
+}
+
+.container-fourteen {
+  margin-top: 50px;
+}
+
+.info-for-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.info-for-contact .info-for-contact__titel {
+  width: 75%;
+  min-width: 500px;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.info-for-contact .info-for-contact__titel p {
+  margin-top: 20px;
+}
+
+.info-for-contact .info-for-contact__phone {
+  padding-left: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.info-for-contact .info-for-contact__phone p:nth-child(2) {
+  margin-top: 20px;
+}
+
+.info-for-contact .info-for-contact__phone p span {
+  font-weight: bold;
+}
+
+.partners {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.partners h4 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.partners p {
+  margin-top: 30px;
+  color: #757575;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.partners-logo {
+  margin-top: 30px;
+  height: 200px;
+  background-color: red;
+}
+
+.contacts {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 500px;
+  background: url(./img/people.jpg) center no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+  z-index: 0;
+}
+
+.contacts__inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 50px 0px;
+  height: 100%;
+  z-index: 50;
+}
+
+.contacts__inner h4, .contacts__inner p, .contacts__inner ul li {
+  text-align: center;
+  line-height: 1.4rem;
+  color: white;
+}
+
+.contacts__inner h4 {
+  font-size: 3rem;
+  margin: 30px 0px;
+}
+
+.contacts__inner ul {
+  margin: 30px 0px;
+}
+
+.contacts__inner ul li a {
+  position: relative;
+  z-index: 60;
+}
+
+.contacts__inner ul li:first-child {
+  font-weight: bold;
+}
+
+.media {
+  margin-top: 10px;
+}
+
+.for-pay {
+  margin-top: 20px;
+}
+
+.for-pay .logo-pay {
+  text-align: center;
+}
+
+.copyright {
+  background: #222;
+  text-align: center;
+  min-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.copyright p {
+  color: #ccc;
 }
 /*# sourceMappingURL=style.css.map */
